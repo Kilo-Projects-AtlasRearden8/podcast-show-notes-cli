@@ -1,0 +1,20 @@
+[project]
+name = "podcast-show-notes-cli"
+version = "0.1.0"
+description = "Draft podcast show notes and episode descriptions from recording notes using a local OpenAI-compatible endpoint (default Ollama)."
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+podcast-show-notes = "podcast_show_notes.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
